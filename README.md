@@ -1,2 +1,8 @@
-# DataStructureVisualization
-A proprietary visualization tool for learning data structures. Unauthorized use or redistribution is prohibited.
+# Data-Structure
+This is website project for data structure visualization. 
+This project can be used by students and teachers to learn data structure clearly.
+
+# Technoly Usage
+We have made this visualizer website using html5, css3 and coreJS. 
+We haven't used any type of third party library.
+Even all the animation used in website are also coded by java script.

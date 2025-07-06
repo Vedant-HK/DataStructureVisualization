@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Visualization</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg-image">
+            <div class="titleBar">
+                <img src="./IMAGES/DU_Logo.png" alt="logo not found" class="logo">
+                <nav>
+                    <ul>
+                        <li id="aboutus">About Us</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="info">
+                <div class="infoBox">
+                    <div class="heading">Data Structure Visualization</div>
+                    <div class="heading-data">
+                        <ul style="list-style-type: circle;">
+                            <li>Simplifies complex concepts through captivating visuals.</li>
+                            <li>Facilitates effortless debugging and optimization.</li>
+                            <li>Empowers learning by bridging theory and practice.</li>
+                            <li>Unravels algorithmic complexities with ease.</li>
+                            <li>Encourages hands-on exploration and experimentation.</li>
+                            <li>Enhances communication through impactful visual storytelling.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="scroll-container">
+                <div class="scroll-wrapper">
+                    <div class="structure-card">
+                        <a href="./STACK/stack.html">
+                            <img src="./IMAGES/Stack.png" alt="image not found" />
+                            <p>Stack</p>
+                        </a>
+                    </div>
+                    <div class="structure-card">
+                        <a href="./QUEUE/queue.html">
+                            <img src="./IMAGES/queue.png" alt="image not found" />
+                            <p>Queue</p>
+                        </a>
+                    </div>
+                    <div class="structure-card">
+                        <a href="./LINK_LIST/link_list.html">
+                            <img src="./IMAGES/Link_List.png" alt="image not found" />
+                            <p>Linked List</p>
+                        </a>
+                    </div>
+                    <div class="structure-card">
+                        <a href="./TREE/tree.html">
+                            <img src="./IMAGES/Tree.png" alt="image not found" />
+                            <p>Tree</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="icons">
+                <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+                <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a href="https://www.github.com" class="fa fa-github"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+            </div>
+            <div class="about">
+                <div class="collabration">Contributions :</div>
+                <div class="names">Developer/Designer : Chaitanya, Chetan, Shubham, Vedant</div>
+            </div>
+            <div class="copyrights">&#169;CCSV &nbsp;<u>A.C Patil College of Engineering</u>-<a
+                    href="https://www.acpce.org/">https://www.acpce.org/</a></div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> &uarr; </button>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        document.getElementById('aboutus').addEventListener('click', () => {
+            location.href = "about.html";
+        });
+    </script>
+</body>
+
+</html>
