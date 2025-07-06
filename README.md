@@ -13,10 +13,15 @@ A unique project designed to help students and developers **visualize complex da
 
 📦 data-structure-visualizer/
 ├── src/ # Source code files
+
 ├── assets/ # Images, icons, or visual elements
+
 ├── data/ # Sample input data (if applicable)
+
 ├── README.md # Project overview (this file)
+
 ├── LICENSE # Licensing terms
+
 └── index.html # If web-based
 
 ## 🛠️ Technologies Used
