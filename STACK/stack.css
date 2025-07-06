@@ -1,0 +1,292 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+::selection {
+	background-color: #a1887f; /* Light brown selection */
+	color: #4e342e; /* Dark brown text */
+}
+
+body {
+	background-color: rgb(245, 222, 179); /* Lighter brown for body background */
+	color: #4e342e; /* Dark brown text */
+}
+
+.container {
+	height: 105vh;
+	width: 100%;
+	background-color: rgb(245, 222, 179); /* Lighter brown for container background */
+	position: fixed;
+}
+
+.contentBox {
+	margin-top: 5px;
+	border-top: 5px solid #8d6e63; /* Medium brown border */
+	height: 80%;
+	width: 100%;
+}
+
+.contentBox .inputs {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: #d7ccc8; /* Light brown for inputs section */
+	height: 100%;
+	width: 25%;
+	float: left;
+	margin-top: 2px;
+	padding: 2px;
+}
+
+.contentBox .inputs > div {
+	margin-top: 15%;
+	width: 80%;
+	display: block;
+	background: #d7ccc8; /* Lighter brown input background */
+	height: 6.6%;
+}
+
+.contentBox .inputs > div > input {
+	padding-left: 0.5px;
+	background-color: #efebe9; /* Lighter brown input field background */
+	color: #4e342e; /* Dark brown text */
+	border: 2px solid #8d6e63; /* Medium brown border */
+	border-radius: 5px;
+}
+
+.contentBox .inputs > div > input,
+.contentBox .inputs > div > button {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.contentBox .inputs > div > button {
+	background-color: #5d4037; /* Darker brown for button */
+	color: #ffffff; /* White text */
+	border-radius: 5px;
+	border: none;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contentBox .inputs > div > button:hover {
+	background-color: #4e342e; /* Even darker brown on hover */
+	transform: scale(1.05); /* Slight increase in size */
+}
+
+.contentBox .inputs > div > button:active {
+	transform: translateY(2px); /* Button press effect */
+}
+
+.contentBox .inputs > div:nth-child(1) > input,
+.contentBox .inputs > div:nth-child(2) > input,
+.contentBox .inputs > div:nth-child(4) > input {
+	width: 62%;
+	height: 100%;
+	outline: none;
+}
+
+.contentBox .inputs > div:nth-child(1) > button,
+.contentBox .inputs > div:nth-child(2) > button,
+.contentBox .inputs > div:nth-child(4) > button {
+	width: 38%;
+	height: 100%;
+}
+
+.contentBox .inputs > div:nth-child(3) > button {
+	width: 100%;
+	height: 100%;
+}
+
+.contentBox .inputs > div:nth-child(5) > input {
+	width: 35%;
+	height: 100%;
+}
+
+.contentBox .inputs > div:nth-child(5) > button {
+	width: 30%;
+	height: 100%;
+}
+
+.contentBox .stackBox {
+	margin: 0;
+	background-color: rgb(245, 222, 179); /* Lighter brown for stack box */
+	height: 100%;
+	width: 75%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	padding-top: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-bottom: 70px;
+	color: #4e342e; /* Dark brown text */
+}
+
+.stackBox .outer {
+	display: flex;
+	align-items: end;
+	width: 35%;
+	height: 600px;
+	padding: 3px;
+}
+
+.outer .inner {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	width: 100%;
+}
+
+.item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background-color: #8d6e63; /* Medium brown for stack items */
+	color: #ffffff; /* White text */
+	border-radius: 5px;
+}
+
+.item:nth-child(1) {
+	border-radius: 0px 0px 20px 20px;
+}
+
+input {
+	outline: none;
+	background-color: #efebe9; /* Very light brown input background */
+	color: #4e342e; /* Dark brown text */
+	padding: 10px;
+	border-radius: 5px;
+}
+
+input::placeholder {
+	color: #8d6e63; /* Medium brown placeholder text */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 600px) {
+	.stackBox .outer {
+		width: 46%;
+	}
+
+	.contentBox .inputs > div {
+		height: 4.6%;
+		margin-bottom: 10px;
+	}
+
+	.contentBox .inputs > div > input,
+	.contentBox .inputs > div > button {
+		font-size: 12.6px;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > input {
+		width: 100%;
+		height: 100%;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > button {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.stackBox .outer {
+		width: 42%;
+	}
+
+	.contentBox .inputs > div {
+		height: 5.6%;
+		margin-bottom: 3px;
+	}
+
+	.contentBox .inputs > div > input,
+	.contentBox .inputs > div > button {
+		font-size: 11.8px;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > input {
+		width: 35%;
+		height: 100%;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > button {
+		height: 100%;
+		width: 30%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.stackBox .outer {
+		width: 42%;
+	}
+
+	.contentBox .inputs > div {
+		height: 6.6%;
+		margin-bottom: 0px;
+	}
+
+	.contentBox .inputs > div > input,
+	.contentBox .inputs > div > button {
+		font-size: 12.8px;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > input {
+		width: 35%;
+		height: 100%;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > button {
+		height: 100%;
+		width: 30%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.stackBox .outer {
+		width: 45%;
+	}
+
+	.contentBox .inputs > div {
+		height: 6.6%;
+		margin-bottom: 0px;
+	}
+
+	.contentBox .inputs > div > input,
+	.contentBox .inputs > div > button {
+		font-size: 17.8px;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > input {
+		width: 35%;
+		height: 100%;
+	}
+
+	.contentBox .inputs > div:nth-child(5) > button {
+		height: 100%;
+		width: 30%;
+	}
+}
+.heading{
+	background-color:#212E50;
+}	
+.titleBar{
+	background-color: #4E7BBB80;
+}
